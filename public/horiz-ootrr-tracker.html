@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>OoTRR Item Tracker</title>
+<script src="/__/firebase/4.2.0/firebase-app.js"></script>
+<script src="/__/firebase/4.2.0/firebase-auth.js"></script>
+<script src="/__/firebase/4.2.0/firebase-database.js"></script>
+<script src="/__/firebase/init.js"></script>
+<script src="/script/button_descriptions.js"></script>
+<script src="/script/shared.js"></script>
+<script src="/script/marking.js"></script>
+<script src="/script/settings.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/items.css">
+<link rel="stylesheet" href="/css/standard-size.css" id="size-css">
+</head>
+<body>
+
+<div id="notInitialized"><h2>Room not initialized</h2></div>
+
+<div class="horiz-container">
+    <div class="tracker box1" id="tracker_items_songs"><script>
+        build_tracker("tracker_items_songs", [
+            ["slingshot", "explosives", "boomerang", "strength", "magic_lens", "spells"],
+            ["hooks", "bow", "magicarrows", "hammer", "boots", "mirrorshield"],
+            ["ctrade_full", "ocarina", "beans", "dungeonopeners", "tunics", "triforce"],
+            ["zlsong", "eponasong", "sariasong", "sunsong", "timesong", "stormssong"],
+            ["minuetsong", "bolerosong", "serenadesong", "nocturnesong", "requiemsong", "preludesong"],
+        ])
+    </script></div>
+
+    <div class="tracker box2" id="tracker_rewards_keys"><script>
+        build_tracker("tracker_rewards_keys", [
+            ["forestmed_compact", "firemed_compact", "watermed_compact", "shadowmed_compact", "spiritmed_compact", "lightmed_compact"],
+            ["atrade_full", "gst", "kokiri_emerald_compact", "goron_ruby_compact", "zora_sapphire_compact", "bottle_letter", "scale"],
+            ["dekutype", "dctype", "jabutype"],
+            ["foresttype", "forestsk", "forestbk", "shadowtype", "shadowsk", "shadowbk", "welltype", "wellsk"], 
+            ["firetype", "firesk", "firebk", "spirittype", "spiritsk", "spiritbk", "forttype", "fortsk"],
+            ["watertype", "watersk", "waterbk", "ganontype", "ganonsk", "ganonbk", "gtgtype", "gtgsk"],
+        ])
+    </script></div>
+</div>
+
+<!-- Room options -->
+<div class="room-controls" id="room-options">
+    <button id="invertHoriz" onclick="swap_layout_orientation()">Invert Layout</button>
+    <button id="toggleCSS" onclick="swap_size_css()">Shrink Icons</button>
+</div>
+
+<ul class="bodytext" id="instructions">
+    <li>Toggle: Left or right click</li>
+    <li>Cycle: Left click forward, Right click reverse</li>
+    <li>Counter: Left click +1, Right click -1, Shift+click +/-10</li>
+    <li>Badge: Left click toggle base, Right click toggle badge</li>
+    <li>Split: Left click toggle left item, Right click toggle right item</li>
+    <li>Medallions/Stones: Left/Right click cycle, Shift+click toggle</li>
+    <li><button id="hideTutorial" onclick="hide_tutorial()">Hide Instructions</button></li>
+</ul>
+
+<!-- Room controls -->
+<div id="room-controls-id", class="room-controls">
+    <input id="passcode" type="text" placeholder="Passcode" />
+    <button id="setPasscode" onclick="set_password()">Initialize room w/passcode</button>
+    <button id="resetRoom" onclick="reset_firebase()">Reset room</button>
+    <div id="ownerControls"><button id="destroyRoom" onclick="destroy_firebase()">Destroy room</button></div>
+</div>
+
+</body>
+</html>

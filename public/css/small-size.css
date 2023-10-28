@@ -1,0 +1,87 @@
+#gst, #triforce {
+  font: 18px Impact, sans-serif;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.med_rewardtext, .stone_rewardtext {
+  display: inline-block;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.med_rewardtext {
+  width: 32px;
+  height: 12px;
+  margin: 1px;
+}
+
+.stone_rewardtext {
+  width: 22px;
+  height: 8.25px;
+  /* margin: 6px 1.5px 11.5px 1.5px; */
+}
+
+.stones {
+  display: inline-block;
+  position: relative;
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  margin: 0px 0px 6px 0px;
+}
+
+.majoritem {
+  display: inline-block;
+  position: relative;
+  background-size: contain;
+  width: 32px;
+  height: 32px;
+  margin: 1px;
+}
+
+.ct_cycle {
+  top: 20px;
+}
+
+.medallion {
+  /* background-size: 85px; */
+}
+
+.simpletype {
+  display: inline-block;
+  background-size: contain;
+  width: 77px;
+  height: 10px;
+}
+
+.dungname-col1 {
+  display: inline-block;
+  background-size: contain;
+  width: 40px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+.dungname-col2 {
+  display: inline-block;
+  background-size: contain;
+  width: 50px;
+  height: 10px;
+  margin-left: 4px;
+}
+
+.dungname-col3 {
+  display: inline-block;
+  background-size: contain;
+  width: 30px;
+  height: 10px;
+  margin-left: 2px;
+}
+
+.keys {
+  display: inline-block;
+  background-size: contain;
+  width: 13.3px;
+  height: 13.3px;
+  font: 12px Impact, sans-serif;
+}

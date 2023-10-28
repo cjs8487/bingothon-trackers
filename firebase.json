@@ -1,0 +1,47 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      ".idea/*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/horiz/**",
+        "destination": "/horiz-ootrr-tracker.html"
+      },
+      {
+        "source": "/tsgmain/**",
+        "destination": "/tsg-vertical.html"
+      },
+      {
+        "source": "/tsgmeds/**",
+        "destination": "/tsg-dungeon-rewards.html"
+      },
+      {
+        "source": "/**",
+        "destination": "/alttpr-tracker.html"
+      }
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "database": {
+      "port": 9000
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "ui": {
+      "enabled": true
+    },
+    "singleProjectMode": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "prod": "bingothon-trackers",
+    "default": "bingothon-trackers"
+  },
+  "targets": {},
+  "etags": {}
+}
