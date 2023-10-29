@@ -144,10 +144,8 @@ function set_item_state(elementid, state) {
         element.classList.remove("false", ...items[elementid]["opts"]);
         element.classList.add(items[elementid]["opts"][state]);
         element.style=`background-image:url('/images/${items[elementid]["opts"][state]}.png')`
-        if(state === 0 && items[elementid]["disable_zero"]){
+        if(state === 0 && items[elementid]["disable_zero"])
             element.classList.add("false");
-            element.style=`background-image:url('/images/${items[elementid]["opts"][1]}.png')`
-        }
     }
     else if(element.classList.contains("toggle") || element.classList.contains("ct_toggle")) {
         toggle_state(element, state, "false");
@@ -186,23 +184,22 @@ function toggle_state(element, state, target) {
 // ===============================================================
 // Build the cycle objects
 function build_cycle(itemid, advcycle) {
-    console.log(items)
     var loop = items[itemid]["loop"] ? "" : " noloop";
     var disable_zero = items[itemid]["disable_zero"] ? " false" : ""
     var classes = `${advcycle}cycle ${items[itemid]["size"]}${loop} ${items[itemid]["opts"][0]}${disable_zero}`;
-    return `<div class="${classes}" id="${itemid}" />`;
+    return `<div class="${classes}" id="${itemid}"></div>`;
 }
 
 // Build the toggle objects
 function build_toggle(itemid, advtoggle) {
     var classes = `${advtoggle}toggle ${items[itemid]["size"]} false`;
-    return `<div class="${classes}" id="${itemid}"></div>`;
+    return `<div class="${classes}" id="${itemid}" style=background-image:url('/images/${itemid}.png');></div>`;
 }
 
 // Build the counter objects
 function build_counter(itemid) {
     var classes = `counter ${items[itemid]["size"]} false`;
-    return `<div class="${classes}" id="${itemid}"></div>`;
+    return `<div class="${classes}" id="${itemid}" style=background-image:url('/images/${itemid}.png');></div>`;
 }
 
 // Build the badge objects
