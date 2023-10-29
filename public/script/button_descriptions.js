@@ -1,3 +1,13 @@
+var dungeon_rewards = ["dungeon0", "dungeon1", "dungeon2", "dungeon3"]
+
+var reward = {
+    type: "cycle",
+    size: "med_rewardtext",
+    loop: true,
+    opts: dungeon_rewards,
+    disable_zero: false
+}
+
 var items = {
     bow: {
         type: "cycle",
@@ -99,6 +109,14 @@ var items = {
         type: "toggle",
         size: "majoritem"
     },
+    go: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    aga: {
+        type: "toggle",
+        size: "majoritem"
+    },
     glove: {
         type: "cycle",
         size: "majoritem",
@@ -132,4 +150,121 @@ var items = {
         loop: false,
         disable_zero: true
     },
+    tunic: {
+        type: "cycle",
+        size: "majoritem",
+        opts: ["tunic1", "tunic2", "tunic3"],
+        loop: false,
+        disable_zero: false
+    },
+    ep: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "ep_reward",
+        toggle_obj: "ep_boss"
+    },
+    ep_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    ep_reward: reward,
+    dp: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "dp_reward",
+        toggle_obj: "dp_boss"
+    },
+    dp_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    dp_reward: reward,
+    th: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "th_reward",
+        toggle_obj: "th_boss"
+    },
+    th_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    th_reward: reward,
+    pod: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "pod_reward",
+        toggle_obj: "pod_boss"
+    },
+    pod_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    pod_reward: reward,
+    sp: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "sp_reward",
+        toggle_obj: "sp_boss"
+    },
+    sp_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    sp_reward: reward,
+    sw: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "sw_reward",
+        toggle_obj: "sw_boss"
+    },
+    sw_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    sw_reward: reward,
+    tt: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "tt_reward",
+        toggle_obj: "tt_boss"
+    },
+    tt_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    tt_reward: reward,
+    ip: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "ip_reward",
+        toggle_obj: "ip_boss"
+    },
+    ip_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    ip_reward: reward,
+    mm: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "mm_reward",
+        toggle_obj: "mm_boss"
+    },
+    mm_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    mm_reward: reward,
+    tr: {
+        type: "cycletoggle",
+        size: "block-element",
+        cycle_obj: "tr_reward",
+        toggle_obj: "tr_boss"
+    },
+    tr_boss: {
+        type: "toggle",
+        size: "majoritem"
+    },
+    tr_reward: reward
 }

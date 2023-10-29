@@ -50,7 +50,6 @@ function cycle(e, element, reverse, noloop) {
             (curstate+1 >= opts.length ? curstate : curstate+1) :
             (curstate+1 >= opts.length ? 0 : curstate+1)
     }
-    console.log(newstate)
     rootRef.child("items").child(element.id).set(newstate);
 }
 
