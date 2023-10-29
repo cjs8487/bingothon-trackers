@@ -26,8 +26,6 @@ for(let i=0; i<urlquery.length; i++) {
 
 // Log the user in and do an initial db sync
 function init(callback) {
-    firebase.database().useEmulator("127.0.0.1", 9000)
-    firebase.auth().useEmulator("http://127.0.0.1:9099")
     firebase.auth().onAuthStateChanged(function(user) {
     if(user) {
         uid = user.uid;

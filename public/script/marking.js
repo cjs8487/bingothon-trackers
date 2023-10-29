@@ -186,7 +186,7 @@ function build_cycle(itemid, advcycle) {
     var loop = items[itemid]["loop"] ? "" : " noloop";
     var disable_zero = items[itemid]["disable_zero"] ? " false" : ""
     var classes = `${advcycle}cycle ${items[itemid]["size"]}${loop} ${items[itemid]["opts"][0]}${disable_zero}`;
-    return `<div class="${classes}" id="${itemid}"></div>`;
+    return `<div class="${classes}" id="${itemid}" style=background-image:url('/images/${items[itemid]["opts"][0]}.png');"></div>`;
 }
 
 // Build the toggle objects
